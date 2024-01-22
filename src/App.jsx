@@ -5,6 +5,9 @@ import Timeline from './components/Timeline';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import { motion, useAnimation } from 'framer-motion';
+import blobBackground from "../src/img/pattern.svg"
+
 
 function App() {
 	const [theme, setTheme] = useState(null);
@@ -63,8 +66,39 @@ function App() {
 		</svg>
 	);
 
+	const controls = useAnimation();
+
+	useEffect(() => {
+		const initAnimation = async () => {
+			await controls.start({
+				opacity: 1,
+				y: [-10, 10, -10, 10, -10], // Define the yoyo effect
+				transition: { duration: 3, ease: "linear", yoyo: Infinity },
+			});
+		};
+
+
+		initAnimation();
+
+	}, [controls]);
+
+	const headerStyle = {
+		background: `url(${blobBackground})`,
+		backgroundSize: 'cover',
+		backgroundPosition: 'center',
+		height: '100vh',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		color: '',
+	};
+
+
+
+
 	return (
 		<>
+
 			<button
 				type="button"
 				onClick={handleThemeSwitch}
@@ -72,16 +106,24 @@ function App() {
 			>
 				{theme === 'dark' ? sun : moon}
 			</button>
-			<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-				<div className="max-w-5xl w-11/12 mx-auto">
-					<Header />
+			<div
+				className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter"
+
+			>
+				<Header />
+				<div className="max-w-5xl mx-auto">
+
+
+
+
 					<Timeline />
 					<Skills />
 					<Projects />
 					<Contact />
-					<Footer/>
+					<Footer />
 				</div>
 			</div>
+
 		</>
 	)
 }

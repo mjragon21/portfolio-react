@@ -59,7 +59,7 @@ const Header = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 0.5, duration: 1.0 }}
-                                            className="text-4xl md:text-5xl lg:text-6xl text-blue-500"
+                                            className="text-4xl md:text-5xl font-bold lg:text-6xl text-blue-500"
                                         >
                                             Michael James Angelo
                                         </motion.span>

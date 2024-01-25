@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     const container = {
@@ -17,7 +16,7 @@ const Header = () => {
             x: 0,
             y: 0,
             transition: {
-                type: "spring",
+                type: 'spring',
                 damping: 12,
                 stiffness: 100,
             },
@@ -27,7 +26,7 @@ const Header = () => {
             x: -20,
             y: 10,
             transition: {
-                type: "spring",
+                type: 'spring',
                 damping: 12,
                 stiffness: 100,
             },
@@ -36,11 +35,8 @@ const Header = () => {
 
     const imgHoverEffect = {
         scale: 1.5,
-        transition: { type: "spring", duration: 0.2 },
+        transition: { type: 'spring', duration: 0.2 },
     };
-
-  
-
 
     return (
         <div style={{ position: 'relative' }}>
@@ -49,13 +45,10 @@ const Header = () => {
                 initial="hidden"
                 animate="visible"
                 className="h-screen"
-               
             >
-
                 <div className="flex flex-col gap-6">
                     <section className="pb-20">
-                        <div class="flex flex-row justify-center px-4 md:gap-24">
-
+                        <div className="flex flex-row justify-center px-4 md:gap-24">
                             <motion.div
                                 variants={child}
                                 className="flex max-w-3xl flex-col gap-4 pt-10 sm:gap-0 sm:pb-24 sm:pt-20 lg:pt-52"
@@ -66,7 +59,7 @@ const Header = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 0.5, duration: 1.0 }}
-                                            className="text-[40px] font-bold leading-none text-primary sm:text-5xl lg:text-6xl text-blue-500"
+                                            className="text-4xl md:text-5xl lg:text-6xl text-blue-500"
                                         >
                                             Michael James Angelo
                                         </motion.span>
@@ -75,14 +68,14 @@ const Header = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 1, duration: 1.5 }}
-                                            className="text-[40px] leading-none sm:text-5xl lg:text-2xl"
+                                            className="text-4xl md:text-2xl lg:text-xl"
                                         >
                                             Front-end Developer - Web Developer
                                         </motion.span>
                                     </h1>
                                 </div>
 
-                                <p className="pr-10 text-base text-content text-justify">
+                                <p className="pr-4 sm:pr-10 text-base sm:text-lg text-content text-justify">
                                     I specialize in front-end development, primarily using React to
                                     create dynamic and modular user interfaces. Leveraging React's
                                     component-based architecture, I ensure scalability and
@@ -107,8 +100,6 @@ const Header = () => {
                     </section>
                 </div>
             </motion.div>
-
-            
         </div>
     );
 }

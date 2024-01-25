@@ -20,45 +20,46 @@ const Skills = () => {
     };
 
     return (
-
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: -40 }}
-            animate={controls}
-            className="p-5 md:p-10"
-        >
-            <div className="flex flex-col items-center gap-3 pb-8">
-                <span className="text-center text-4xl font-semibold text-primary">
-                    Skills
-                </span>
-            </div>
-
+        <div className="min-h-screen flex items-center justify-center">
             <motion.div
                 ref={ref}
                 initial={{ opacity: 0, x: -40 }}
                 animate={controls}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+                className="p-5 md:p-10"
             >
-                {skillsData.map((skill) => (
-                    <motion.div
-                        key={skill.name}
-                        whileHover={imgHoverEffect}
-                        className="relative max-w-xs overflow-hidden rounded-md bg-gray-100 bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
-                    >
-                        <div className="flex items-center justify-center">
-                            <img
-                                className="h-[52px] w-[52px]"
-                                src={skill.icon}
-                                alt={skill.name}
-                            />
-                            <p className="mt-2 text-sm font-medium dark:text-gray-300">
-                                {skill.name}
-                            </p>
-                        </div>
-                    </motion.div>
-                ))}
+                <div className="flex flex-col items-center gap-3 pb-8">
+                    <span className="text-center text-4xl font-semibold text-primary">
+                        Skills
+                    </span>
+                </div>
+
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={controls}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+                >
+                    {skillsData.map((skill) => (
+                        <motion.div
+                            key={skill.name}
+                            whileHover={imgHoverEffect}
+                            className="relative max-w-xs overflow-hidden rounded-md bg-gray-100 bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                        >
+                            <div className="flex items-center justify-center">
+                                <img
+                                    className="h-[52px] w-[52px]"
+                                    src={skill.icon}
+                                    alt={skill.name}
+                                />
+                                <p className="mt-2 text-sm font-medium dark:text-gray-300">
+                                    {skill.name}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
             </motion.div>
-        </motion.div>
+        </div>
 
     );
 };

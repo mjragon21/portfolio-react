@@ -25,6 +25,6 @@ export default [
         title: 'TVL Computer System Servicing',
         duration: 'start',
         details:
-            "I wrote my first line of real code that started this journey into digital craftsmanship that I never could've imagined, especially as someone who never saw themselves as anything other than a blue collar worker.",
+            "I wrote my first line of code, initiating a journey into the realm of digital craftsmanship that surpassed my expectations. This was particularly surprising for someone who had never envisioned themselves pursuing such a path.",
     },
 ]

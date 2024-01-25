@@ -19,9 +19,13 @@ const Projects = () => {
     }, [controls, inView]);
 
     return (
-        <div className='h-screen'>
-
-            <div className='flex flex-col md:flex-row items-center justify-center h-screen mt-10'>
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: -40 }}
+            animate={controls}
+            className="mt-10"
+        >
+            <div className="flex flex-col md:flex-row items-center justify-center mt-10">
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col items-center gap-3">
                         <span className="text-center text-4xl font-semibold text-primary">
@@ -33,7 +37,9 @@ const Projects = () => {
                             ref={ref}
                             initial={{ opacity: 0, x: -40 }}
                             animate={controls}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10">
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10"
+                        >
+
                             {[{ link: 'https://mjragon21.github.io/react-todo/', image: todo, title: 'Todo-list App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/vite.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
                             { link: 'https://weather-app-nine-olive-10.vercel.app/', image: weather, title: 'Weather App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/vite.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
                             { link: 'https://react-app-quiz-omega.vercel.app/', image: quiz, title: 'Quiz App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
@@ -61,7 +67,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

@@ -4,9 +4,9 @@ import Projects from './components/Projects';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+
 import Footer from './components/Footer';
 import { motion, useAnimation } from 'framer-motion';
-import blobBackground from "../src/img/pattern.svg"
 
 
 function App() {
@@ -82,17 +82,6 @@ function App() {
 
 	}, [controls]);
 
-	const headerStyle = {
-		background: `url(${blobBackground})`,
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
-		height: '100vh',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		color: '',
-	};
-
 
 
 
@@ -106,10 +95,7 @@ function App() {
 			>
 				{theme === 'dark' ? sun : moon}
 			</button>
-			<div
-				className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter"
-
-			>
+			<div className="bg-white dark:bg-custom-dark-bg text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 				<Header />
 				<div className="max-w-5xl mx-auto">
 

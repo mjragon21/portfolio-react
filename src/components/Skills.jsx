@@ -71,7 +71,7 @@ const skillsData = [
     { name: 'Vite', icon: 'https://img.icons8.com/color/48/vite.png' },
     { name: 'Git', icon: 'https://img.icons8.com/color/48/github--v1.png' },
     { name: 'PHP', icon: 'https://img.icons8.com/ios/50/php-logo.png' },
-    { name: 'MySQL', icon: 'https://img.icons8.com/fluency/48/mysql-logo.png' },
+    { name: ' MySQL', icon: 'https://img.icons8.com/fluency/48/mysql-logo.png' },
     { name: 'MongoDB', icon: 'https://img.icons8.com/color/48/mongodb.png' },
     { name: 'Postman', icon: 'https://img.icons8.com/dusk/256/postman-api.png' },
     { name: 'SASS', icon: 'https://img.icons8.com/color/48/sass.png' },

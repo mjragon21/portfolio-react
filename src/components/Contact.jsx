@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+
+
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -23,121 +23,99 @@ const Contact = () => {
             );
     };
 
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-    });
-
-    useEffect(() => {
-        if (inView) {
-            controls.start({ opacity: 1, x: 0 });
-        }
-    }, [controls, inView]);
-
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: -40 }}
-            animate={controls}
-            className="h-screen mt-40 pt-20 md:mt-0 " 
-        >
-            <div className="bg-gray-200 relative rounded-xl p-5 sm:py-2 max-w-screen-md mx-auto dark:bg-[#151c2f]">
-
-                <div className="max-w-xl relative z-10 text-center mx-auto">
-                    <section className="relative flex justify-center ">
-                        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-                            <div className="mx-auto max-w-lg text-center">
-                                <h1 className="text-2xl font-bold sm:text-3xl">Contact me!</h1>
-                            </div>
-
-                            <form ref={form} onSubmit={sendEmail} className="mx-auto mb-0 mt-8 max-w-md space-y-4">
-                                <form ref={form} onSubmit={sendEmail} className="mx-auto mb-0 mt-8 max-w-md space-y-4 ">
-                                    <div>
-                                        <label htmlFor="name" className="sr-only">Name</label>
-
-                                        <div className="relative">
-                                            <input
-
-                                                className="w-full rounded-lg  p-4 pe-12 text-sm shadow-sm dark:text-stone-800"
-                                                placeholder="Name"
-                                                name="sendername"
-                                            />
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="subject" className="sr-only">Subject</label>
-
-                                        <div className="relative">
-                                            <input
-
-                                                className="w-full rounded-lg  p-4 pe-12 text-sm shadow-sm dark:text-stone-800"
-                                                placeholder="Subject"
-                                                name="subject"
-                                            />
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email" className="sr-only">Email</label>
-
-                                        <div className="relative">
-                                            <input
-                                                type="email"
-                                                className="w-full rounded-lg  p-4 pe-12 text-sm shadow-sm dark:text-stone-800"
-                                                placeholder="Enter email"
-                                                name="senderemail"
-                                            />
-
-                                            <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-4 w-4 text-gray-400"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                                                    />
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label for="Message" class="block text-sm font-medium text-gray-700"> </label>
-
-                                        <textarea
-                                            name="message"
-                                            class="mt-2 w-full rounded-lg  align-top shadow-sm sm:text-sm dark:text-stone-800"
-                                            rows="4"
-                                            placeholder="Enter any messages..."
-
-                                        ></textarea>
-                                    </div>
-
-
-                                    <div className="flex items-center justify-between">
-                                        <motion.div whileHover={{ scale: 1.15 }}>
-                                            <button type="submit" value="Send" className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
-                                                Send
-                                            </button>
-                                        </motion.div>
-                                    </div>
-                                </form>
-
-                               
-                            </form>
-                        </div>
-                    </section>
-                </div>
+        <div className="isolate bg-transparent  px-6 py-24 sm:py-32 lg:px-8">
+            <div
+                className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+                aria-hidden="true"
+            >
+                <div
+                    className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+                    style={{
+                        clipPath:
+                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    }}
+                />
             </div>
-        </motion.div>
-    );
-};
+            <div className="mx-auto max-w-2xl text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-stone-300">Contact me!</h2>
+                <p className="dark:text-stone-300 mt-2 text-lg leading-8 text-gray-600">
+                    Feel free to reach out – I'm just a click away for any questions, collaborations, or a friendly chat!
+                </p>
+            </div>
+            <form ref={form} onSubmit={sendEmail} method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div className="sm:col-span-2">
+                        <label htmlFor="name" className="dark:text-stone-300 block text-sm font-semibold leading-6 text-gray-900">
+                            Name
+                        </label>
+                        <div className="mt-2.5">
+                            <input
+                               
+                                name="from_name"
 
+                                
+                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className="sm:col-span-2">
+                        <label htmlFor="email" className="dark:text-stone-300 block text-sm font-semibold leading-6 text-gray-900">
+                            Email
+                        </label>
+                        <div className="mt-2.5">
+                            <input
+                                type="email"
+                                name="senderemail"
+
+                                autoComplete="email"
+                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                        </div>
+                    </div>
+                    <div className="sm:col-span-2">
+                        <label htmlFor="subject" className="dark:text-stone-300 block text-sm font-semibold leading-6 text-gray-900">
+                            Subject
+                        </label>
+                        <div className="mt-2.5">
+                            <input
+                                
+                                name="subject"
+                                
+                                autoComplete="email"
+                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="sm:col-span-2">
+                        <label htmlFor="message" className="dark:text-stone-300 block text-sm font-semibold leading-6 text-gray-900">
+                            Message
+                        </label>
+                        <div className="mt-2.5">
+                            <textarea
+                                name="message"
+                               
+                                rows={4}
+                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                defaultValue={''}
+                            />
+                        </div>
+                    </div>
+
+                </div>
+                <div className="mt-10">
+                    <button
+                        type="submit" value="Send"
+                        className="dark:text-stone-300 block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                        Let's talk
+                    </button>
+                </div>
+            </form>
+        </div>
+    )
+}
 export default Contact;

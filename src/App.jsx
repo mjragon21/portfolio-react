@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
-import Contact from './components/Contact';
+
 import Skills from './components/Skills';
 
 import Footer from './components/Footer';
 import { motion, useAnimation } from 'framer-motion';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -105,7 +106,8 @@ function App() {
 					<Timeline />
 					<Skills />
 					<Projects />
-					<Contact />
+					
+					<Contact/>
 					<Footer />
 				</div>
 			</div>

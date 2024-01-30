@@ -1,6 +1,7 @@
 import todo from "../img/todo.png";
 import weather from "../img/weather.png";
 import quiz from "../img/quiz.png";
+import calculator from "../img/calculator.png";
 import chatapp from "../img/chatapp.png";
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -43,6 +44,7 @@ const Projects = () => {
                             {[{ link: 'https://mjragon21.github.io/react-todo/', image: todo, title: 'Todo-list App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/vite.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
                             { link: 'https://weather-app-nine-olive-10.vercel.app/', image: weather, title: 'Weather App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/vite.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
                             { link: 'https://react-app-quiz-omega.vercel.app/', image: quiz, title: 'Quiz App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/react-native.png'], demoLabel: 'Demo' },
+                            { link: 'https://react-calculator-omega-one.vercel.app/', image: calculator, title: 'Calculator App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/react-native.png', 'https://img.icons8.com/color/48/vite.png'], demoLabel: 'Demo' },
                             { link: 'https://chat-react-tawny.vercel.app/', image: chatapp, title: 'Chat App', icons: ['https://img.icons8.com/color/48/javascript--v1.png', 'https://img.icons8.com/color/48/vite.png', 'https://img.icons8.com/color/48/react-native.png', 'https://img.icons8.com/color/48/firebase.png'], demoLabel: 'Demo' }].map((project, index) => (
                                 <a key={index} target="_blank" rel="noopener noreferrer" href={project.link} className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden mb-4">
                                     <img className="w-full h-36 md:h-48 object-fit cursor-pointer " src={project.image} alt={project.title} />

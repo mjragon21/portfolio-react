@@ -88,7 +88,6 @@ function App() {
 
 	return (
 		<>
-
 			<button
 				type="button"
 				onClick={handleThemeSwitch}
@@ -99,14 +98,9 @@ function App() {
 			<div className="bg-white dark:bg-custom-dark-bg text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 				<Header />
 				<div className="max-w-5xl mx-auto">
-
-
-
-
 					<Timeline />
 					<Skills />
 					<Projects />
-					
 					<Contact/>
 					<Footer />
 				</div>

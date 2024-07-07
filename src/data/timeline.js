@@ -1,8 +1,15 @@
 export default [
     {
-        year: 'Today',
+        year: '2024',
+        title: 'Junior Software Engineer (Tom`s World Philippines) ',
+        duration: 'Current',
+        details:
+            'I am currently working as a Junior Software Engineer at Tom`s World, using CodeIgniter, PHP, and MySQL. My responsibilities include developing and maintaining software applications, improving code quality, and participating in the software development lifecycle. This role allows me to apply my skills and contribute to various projects within the company.',
+    },
+    {
+        year: '2024',
         title: 'Web Developer ',
-        duration: 'now',
+        duration: '',
         details:
             'My humble attempt at building my version of the digital world one step at a time by documenting my coding journey and creating software engineering and computer science content to enhance my programming skills.',
     },

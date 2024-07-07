@@ -25,11 +25,10 @@ const Skills = () => {
                 ref={ref}
                 initial={{ opacity: 0, x: -40 }}
                 animate={controls}
-                className="p-5 md:p-10"
-            >
+                className="p-5 md:p-10">
                 <div className="flex flex-col items-center gap-3 pb-8">
                     <span className="text-center text-4xl font-semibold text-primary">
-                        Skills
+                        Frontend
                     </span>
                 </div>
 
@@ -39,7 +38,7 @@ const Skills = () => {
                     animate={controls}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
                 >
-                    {skillsData.map((skill) => (
+                    {frontEnd.map((skill) => (
                         <motion.div
                             key={skill.name}
                             whileHover={imgHoverEffect}
@@ -58,24 +57,69 @@ const Skills = () => {
                         </motion.div>
                     ))}
                 </motion.div>
+
+
+                <div className="flex flex-col items-center gap-3 pb-8 mt-5">
+                    <span className="text-center text-4xl font-semibold text-primary">
+                        Backend
+                    </span>
+                </div>
+
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={controls}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+                >
+                    {backEnd.map((skill) => (
+                        <motion.div
+                            key={skill.name}
+                            whileHover={imgHoverEffect}
+                            className="relative max-w-xs overflow-hidden rounded-md bg-gray-100 bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                        >
+                            <div className="flex items-center justify-center">
+                                <img
+                                    className="h-[52px] w-[52px]"
+                                    src={skill.icon}
+                                    alt={skill.name}
+                                />
+                                <p className="mt-2 text-sm font-medium dark:text-gray-300">
+                                    {skill.name}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
             </motion.div>
         </div>
 
     );
 };
 
-const skillsData = [
+const frontEnd = [
     { name: 'HTML 5', icon: 'https://img.icons8.com/fluency/48/html-5.png' },
+    { name: 'CSS', icon: 'https://img.icons8.com/?size=48&id=21278&format=png' },
     { name: 'Tailwind CSS', icon: 'https://img.icons8.com/fluency/48/tailwind_css.png' },
     { name: 'Javascript', icon: 'https://img.icons8.com/color/48/javascript--v1.png' },
     { name: 'Vite', icon: 'https://img.icons8.com/color/48/vite.png' },
-    { name: 'Git', icon: 'https://img.icons8.com/color/48/github--v1.png' },
+    { name: 'SASS', icon: 'https://img.icons8.com/color/48/sass.png' },
+    { name: 'Boostrap', icon: 'https://img.icons8.com/?size=48&id=PndQWK6M1Hjo&format=png' },
+    { name: 'React', icon: 'https://img.icons8.com/?size=48&id=123603&format=png' },
+    
+];
+
+
+const backEnd = [
     { name: 'PHP', icon: 'https://img.icons8.com/ios/50/php-logo.png' },
-    { name: ' MySQL', icon: 'https://img.icons8.com/fluency/48/mysql-logo.png' },
+    { name: 'MySQL', icon: 'https://img.icons8.com/fluency/48/mysql-logo.png' },
     { name: 'MongoDB', icon: 'https://img.icons8.com/color/48/mongodb.png' },
     { name: 'Postman', icon: 'https://img.icons8.com/dusk/256/postman-api.png' },
-    { name: 'SASS', icon: 'https://img.icons8.com/color/48/sass.png' },
     { name: 'Firebase', icon: 'https://img.icons8.com/color/48/firebase.png' },
+    { name: 'Codeigniter', icon: 'https://img.icons8.com/?size=48&id=UusFUDMbDtl7&format=png' },
+    { name: 'Postman', icon: 'https://img.icons8.com/dusk/256/postman-api.png' },
+    { name: 'Git', icon: 'https://img.icons8.com/color/48/github--v1.png' },
+
 ];
 
 export default Skills;
